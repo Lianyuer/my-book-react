@@ -1,0 +1,82 @@
+html,
+body {
+  height: 100%;
+  font-size: 12px;
+}
+#root {
+  height: 100%;
+}
+.app-container {
+  min-width: 800px;
+  display: flex;
+  height: 100%;
+}
+.app-container .leftBox {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-container .leftBox .leftPic {
+  width: 70%;
+}
+.app-container .rightBox {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+.app-container .rightBox .loginForm {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-container .rightBox .loginForm .loginMethod {
+  display: flex;
+  justify-content: center;
+}
+.app-container .rightBox .loginForm .loginMethod h4 {
+  position: relative;
+  height: 5rem;
+  line-height: 60px;
+  margin: 0 20px;
+  font-family: '黑体';
+  font-weight: 700;
+  color: #A3AFB6;
+}
+.app-container .rightBox .loginForm .loginMethod h4.active {
+  color: #000;
+}
+.app-container .rightBox .loginForm .loginMethod h4.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #0d6efd;
+}
+.app-container .rightBox .loginForm .form {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+.app-container .rightBox .loginForm .form input {
+  width: 70%;
+  height: 4.5rem;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.app-container .rightBox .loginForm .form button {
+  width: 70%;
+  height: 4.5rem;
+}
+.app-container .rightBox .loginForm form.active {
+  display: block;
+}
