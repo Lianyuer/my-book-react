@@ -4,6 +4,9 @@
 import React, { useState } from "react";
 // 引入按钮
 import Button from "react-bootstrap/Button";
+
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 const Tabs = () => {
   const tabs = ["密码登录", "验证码登录"];
   //  const toggleTab=(e)=> {
@@ -51,16 +54,31 @@ const Tabs = () => {
       </div>
       {/* 登录表单 */}
       <form className={`form gap-5 active`}>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="请输入手机号"
-        ></input>
-        <input
-          type="text"
-          className="form-control"
-          placeholder={activeTab === "pwdLogin" ? "请输入密码" : "请输入验证码"}
-        ></input>
+        <InputGroup className="mb-5">
+          <InputGroup.Text id="basic-addon1" className="iconfont">
+            &#xe7e4;
+          </InputGroup.Text>
+          <Form.Control
+            placeholder="请输入手机号"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </InputGroup>
+        <InputGroup className="mb-5">
+          {/* String.fromCharCode方法将数字代码转换为对应的字符 */}
+          <InputGroup.Text id="basic-addon1" className="iconfont">
+            {activeTab === "pwdLogin"
+              ? String.fromCharCode(0xe600)
+              : String.fromCharCode(0xe647)}
+          </InputGroup.Text>
+          <Form.Control
+            placeholder={
+              activeTab === "pwdLogin" ? "请输入密码" : "请输入验证码"
+            }
+            aria-label="pwdOrcode"
+            aria-describedby="basic-addon1"
+          />
+        </InputGroup>
         <Button variant="primary" size="lg">
           登录
         </Button>

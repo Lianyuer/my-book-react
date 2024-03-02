@@ -81,13 +81,39 @@ body {
         // align-items: center;
         width: 100%;
 
-        input {
-          width: 70%;
-          height: 4.5rem;
-          font-size: 1.25rem;
-          margin: 0 auto;
-          margin-bottom: 4rem;
+        @font-face {
+          font-family: 'iconfont';
+          src: url('../font/iconfont.woff2?t=1709355712871') format('woff2'),
+            url('../font/iconfont.woff?t=1709355712871') format('woff'),
+            url('../font/iconfont.ttf?t=1709355712871') format('truetype');
         }
+
+        .iconfont {
+          font-family: "iconfont" !important;
+          font-size: 16px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        .input-group {
+          width: 70%;
+          margin: 0 auto;
+
+          .input-group-text {
+            border-right: 0;
+            background-color: #fff;
+          }
+
+          input {
+            width: 70%;
+            height: 4.5rem;
+            font-size: 1.25rem;
+            margin: 0 auto;
+            border-left: 0;
+          }
+        }
+
 
         button {
           width: 70%;
